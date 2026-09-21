@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Barcelona - Comunidad Culé</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo">
+                
+                <span class="logo-text">FC BARCELONA</span>
+            </div>
+            <nav class="nav">
+                <a href="#beneficios">Beneficios</a>
+                <a href="#registro" class="btn-nav">Unirse ahora</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge">Més que un club</span>
+                <h1>Únete a la mayor comunidad de <strong>aficionados culés</strong></h1>
+                <p>Regístrate hoy mismo para tener acceso prioritario a la preventa de entradas, sorteos de camisetas oficiales firmadas, contenido exclusivo detrás de las cámaras y un 10% de descuento en la Barça Store.</p>
+                <div class="features" id="beneficios">
+                    <div class="feature-item">
+                        <span class="icon">🎟️</span>
+                        <div>
+                            <h3>Entradas garantizadas</h3>
+                            <p>Preventa exclusiva para grandes partidos de Liga y Champions.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="icon">👕</span>
+                        <div>
+                            <h3>Sorteos mensuales</h3>
+                            <p>Equipaciones oficiales firmadas por los jugadores del primer equipo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container" id="registro">
+                <h2>Crea tu cuenta Culé</h2>
+                <p class="form-subtitle">Forma parte de nuestra historia</p>
+                
+                <form id="barcaForm" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                        <span class="error-msg" id="error-nombre">Por favor, introduce tu nombre.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                        <span class="error-msg" id="error-email">Introduce un correo electrónico válido.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais">País de residencia</label>
+                        <select id="pais" name="pais" required>
+                            <option value="" disabled selected>Selecciona tu país</option>
+                            <option value="ES">España</option>
+                            <option value="MX">México</option>
+                            <option value="AR">Argentina</option>
+                            <option value="CO">Colombia</option>
+                            <option value="US">Estados Unidos</option>
+                            <option value="OTROS">Otro país</option>
+                        </select>
+                        <span class="error-msg" id="error-pais">Por favor, selecciona tu país.</span>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto la política de privacidad y los términos de la comunidad.</label>
+                    </div>
+                    <span class="error-msg checkbox-error" id="error-terminos">Debes aceptar los términos para continuar.</span>
+
+                    <button type="submit" class="btn-submit">Registrarme gratis</button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <h3>¡Bienvenido a la familia, Culé! 💙❤️</h3>
+                    <p>Tu registro se ha completado correctamente. Revisa tu correo para activar tu cuenta y obtener tus beneficios.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+ 
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 FC Barcelona Landing Page de Comunidad. Creado con pasión futbolera.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
