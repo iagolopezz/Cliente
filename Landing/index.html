@@ -1,123 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing FC Barcelona</title>
+    <title>FC Barcelona - Comunidad Culé</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    
-    <header>
-        <div class="logo-placeholder">FC <span>BARCELONA</span></div>
+
+    <!-- CABECERA -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">FC BARCELONA</a>
+        </div>
     </header>
 
-  
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Únete al <span>Club MÁS Grande</span> del Mundo</h1>
-            <p>Sé parte de la comunidad oficial de Culés en todo el mundo. Regístrate hoy y accede a ventajas y contenidos que no encontrarás en ningún otro lugar.</p>
-        </div>
-    </section>
-
-   
-    <div class="container">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container hero-grid">
         
-        <!-- Tarjeta de Beneficios -->
-        <div class="benefits-card">
-            <h2>¿Por qué unirte hoy?</h2>
+        <!-- SECCIÓN IZQUIERDA: TEXTO Y BENEFICIOS -->
+        <section class="hero-left">
+            <span class="badge">Beneficios Unirse ahora</span>
+            <h1><span>Més que un club</span> Únete a la mayor comunidad de aficionados culés</h1>
+            <p class="intro-text">Regístrate hoy mismo para tener acceso prioritario a la preventa de entradas, sorteos de camisetas oficiales firmadas, contenido exclusivo detrás de las cámaras y un 10% de descuento en la Barça Store.</p>
             
-            <div class="benefit-item">
-                <div class="benefit-icon">✓</div>
-                <div class="benefit-text">
-                    <h3>Preventa Exclusiva</h3>
-                    <p>Acceso prioritario a la compra de entradas para partidos en el Spotify Camp Nou.</p>
+            <div class="beneficios">
+                <div class="beneficio-tarjeta">
+                    <span class="icono">🎟</span>
+                    <div>
+                        <h3>Entradas garantizadas</h3>
+                        <p>Preventa exclusiva para grandes partidos de Liga y Champions.</p>
+                    </div>
+                </div>
+                <div class="beneficio-tarjeta">
+                    <span class="icono">👕</span>
+                    <div>
+                        <h3>Sorteos mensuales</h3>
+                        <p>Equipaciones oficiales firmadas por los jugadores del primer equipo.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="benefit-item">
-                <div class="benefit-icon">✓</div>
-                <div class="benefit-text">
-                    <h3>Contenido Premium</h3>
-                    <p>Vídeos detrás de las cámaras, entrevistas exclusivas con tus jugadores favoritos y entrenamientos completos.</p>
+        <!-- SECCIÓN DERECHA: FORMULARIO -->
+        <section class="hero-right">
+            <div class="form-box">
+                
+                <!-- FORMULARIO DE REGISTRO -->
+                <form id="barcaForm">
+                    <h2>Crea tu cuenta Culé</h2>
+                    <p>Forma parte de nuestra historia</p>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" required placeholder="Tu nombre aquí">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" required placeholder="tu@correo.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais">País de residencia</label>
+                        <select id="pais" required>
+                            <option value="">Selecciona tu país</option>
+                            <option value="España">España</option>
+                            <option value="México">México</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Otro país">Otro país</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terminos" required>
+                        <label for="terminos">Acepto la política de privacidad y los términos.</label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Registrarme gratis</button>
+                </form>
+
+                <!-- PANTALLA DE ÉXITO -->
+                <div id="successMessage" class="mensaje-exito">
+                    <h3>¡Bienvenido a la familia, Culé! 💙❤️</h3>
+                    <p>Tu registro se ha completado correctamente.</p>
+                    
+       
+                    <div id="respuestas-usuario"></div>
                 </div>
+
             </div>
+        </section>
+    </main>
 
-            <div class="benefit-item">
-                <div class="benefit-icon">✓</div>
-                <div class="benefit-text">
-                    <h3>Sorteos Mensuales</h3>
-                    <p>Gana camisetas oficiales firmadas, balones, merchandising exclusivo y experiencias VIP en el estadio.</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">✓</div>
-                <div class="benefit-text">
-                    <h3>Descuentos Oficiales</h3>
-                    <p>10% de descuento de bienvenida para usar en la Barça Store Online.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarjeta del Formulario -->
-        <div class="form-card">
-            <h2>Regístrate Gratis</h2>
-            <form id="fcb-landing-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="pais">País de Residencia</label>
-                    <select id="pais" name="pais" required>
-                        <option value="" disabled selected>Selecciona tu país</option>
-                        <option value="ES">España</option>
-                        <option value="MX">México</option>
-                        <option value="AR">Argentina</option>
-                        <option value="CO">Colombia</option>
-                        <option value="US">Estados Unidos</option>
-                        <option value="OTROS">Otro país</option>
-                    </select>
-                </div>
-
-                <div class="form-checkbox">
-                    <input type="checkbox" id="terminos" name="terminos" required>
-                    <label for="terminos">Acepto la política de privacidad y doy mi consentimiento para recibir novedades y promociones exclusivas del FC Barcelona.</label>
-                </div>
-
-                <button type="submit" class="btn-submit">¡Quiero ser parte!</button>
-            </form>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 FC Barcelona. Todos los derechos reservados.</p>
-        <p>Esta es una página de demostración inspirada en la identidad visual del club.</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 FC Barcelona Landing Page de Iago López.</p>
     </footer>
 
-    <!-- JavaScript interactivo básico -->
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            // Obtener valores de los campos
-            const nombre = document.getElementById('nombre').value;
-            const email = document.getElementById('email').value;
-            
-            // Simulación de envío exitoso
-            alert(`¡Visca el Barça, ${nombre}! Te has registrado correctamente con el correo: ${email}. Revisa tu bandeja de entrada para reclamar tus ventajas.`);
-            
-            // Limpiar formulario
-            document.getElementById('fcb-landing-form').reset();
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
