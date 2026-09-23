@@ -45,13 +45,20 @@ body {
     letter-spacing: 2px;
 }
 
-/* Layout en dos columnas*/
+
+main {
+    flex: 1; 
+    display: flex;
+    align-items: center; 
+}
+
+
 .cuadrcula-principal {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     padding: 40px 0;
-    flex: 1;
+    width: 100%; 
 }
 
 .columna-izquierda, .columna-derecha {
@@ -174,7 +181,7 @@ h1 span {
     background-color: #00366b;
 }
 
-/* Footer */
+/* Pie de página */
 .pie-pagina {
     background-color: #050b1a;
     padding: 20px 0;
