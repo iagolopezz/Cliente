@@ -8,85 +8,91 @@
 </head>
 <body>
 
-    <!-- Header de la página -->
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">FC BARCELONA</a>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="contenedor">
+            <a href="#" class="logotipo">FC BARCELONA</a>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="container hero-grid">
-        
-        <!-- Columna Izquierda: Información y Beneficios -->
-        <section class="hero-left">
-            <span class="badge">Més que un club</span>
-            <h1>Únete a la mayor comunidad de aficionados culés</h1>
-            <p class="intro-text">Regístrate hoy mismo para tener acceso prioritario a la preventa de entradas, sorteos de camisetas oficiales firmadas, contenido exclusivo detrás de las cámaras y un 10% de descuento en la Barça Store.</p>
+
+    <main class="contenedor">
+        <div class="cuadrcula-principal">
             
-            <div class="beneficios">
-                <div class="beneficio-tarjeta">
-                    <span class="icono">🎟</span>
-                    <div>
-                        <h3>Entradas garantizadas</h3>
-                        <p>Preventa exclusiva para grandes partidos de Liga y Champions.</p>
+            <!-- Columna Izquierda -->
+            <section class="columna-izquierda">
+                <span class="insignia">Més que un club</span>
+                <h1>Únete a la mayor comunidad de aficionados culés</h1>
+                <p class="texto-introductorio">
+                    Regístrate hoy mismo para tener acceso prioritario a la preventa de entradas, sorteos de camisetas oficiales firmadas, contenido exclusivo detrás de las cámaras y un 10% de descuento en la Barça Store.
+                </p>
+
+                <!-- Bloques de Beneficios -->
+                <div class="beneficios">
+                    <div class="beneficio-tarjeta">
+                        <span class="icono">🎟</span>
+                        <div>
+                            <h3>Entradas garantizadas</h3>
+                            <p>Preventa exclusiva para grandes partidos de Liga y Champions.</p>
+                        </div>
+                    </div>
+
+                    <div class="beneficio-tarjeta">
+                        <span class="icono">👕</span>
+                        <div>
+                            <h3>Sorteos mensuales</h3>
+                            <p>Equipaciones oficiales firmadas por los jugadores del primer equipo.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="beneficio-tarjeta">
-                    <span class="icono">👕</span>
-                    <div>
-                        <h3>Sorteos mensuales</h3>
-                        <p>Equipaciones oficiales firmadas por los jugadores del primer equipo.</p>
-                    </div>
+            </section>
+
+            <!-- Columna Derecha (Formulario) -->
+            <aside class="columna-derecha">
+                <div class="caja-formulario">
+                    <h2>Crea tu cuenta Culé</h2>
+                    <p>Forma parte de nuestra historia</p>
+
+                    <form action="#" method="POST">
+                        <div class="grupo-formulario">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="pais">País de residencia</label>
+                            <select id="pais" name="pais" required>
+                                <option value="" disabled selected>Selecciona tu país</option>
+                                <option value="ES">España</option>
+                                <option value="MX">México</option>
+                                <option value="AR">Argentina</option>
+                                <option value="CO">Colombia</option>
+                                <option value="US">Estados Unidos</option>
+                                <option value="OTRO">Otro país</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-casilla">
+                            <input type="checkbox" id="privacidad" name="privacidad" required>
+                            <label for="privacidad">Acepto la política de privacidad y los términos.</label>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Registrarme gratis</button>
+                    </form>
                 </div>
-            </div>
-        </section>
+            </aside>
 
-        <!-- Columna Derecha: Formulario de Registro Nativo sin JS -->
-        <section class="hero-right">
-            <div class="form-box">
-                <h2>Crea tu cuenta Culé</h2>
-                <p>Forma parte de nuestra historia</p>
-                
-                <form action="" method="GET">
-                    <div class="form-group">
-                        <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="pais">País de residencia</label>
-                        <select id="pais" name="pais" required>
-                            <option value="" disabled selected>Selecciona tu país</option>
-                            <option value="España">España</option>
-                            <option value="México">México</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Colombia">Colombia</option>
-                            <option value="Estados Unidos">Estados Unidos</option>
-                            <option value="Otro país">Otro país</option>
-                        </select>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="politica" name="politica" required>
-                        <label for="politica">Acepto la política de privacidad y los términos.</label>
-                    </div>
-
-                    <button type="submit" class="btn-enviar">Registrarme gratis</button>
-                </form>
-            </div>
-        </section>
-
+        </div>
     </main>
 
-    <!-- Footer de la página -->
-    <footer class="footer">
-        <div class="container">
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
             <p>&copy; 2026 FC Barcelona Landing Page de Iago López.</p>
         </div>
     </footer>
