@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Comunidad Culé - FC Barcelona</title>
+
+    <link rel="stylesheet" href="estilos.css"> 
+  
+    <script src="https://jquery.com"></script>
+
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+            <a href="index.html" class="logotipo">
+                <img src="Imagenes/escudo.png" alt="Escudo FC Barcelona" class="escudo-barca">
+                FC BARCELONA
+            </a>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Beneficios</a></li>
+                    <li><a href="#">Entradas</a></li>
+                    <li><a href="#">Barça Store</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="seccion-resultado">
+        <div class="contenedor-resultado">
+            <div class="caja-formulario tarjeta-exito">
+                <span class="insignia">¡Registro Éxito!</span>
+                
+                <!-- Aquí es donde el JS inyectará el nombre -->
+                <h1>¡Bienvenido, <span id="res-nombre" class="texto-resaltado"></span>!</h1>
+                
+                <p>Te has registrado correctamente en la mayor comunidad de aficionados del mundo.</p>
+
+                <div class="resumen-datos">
+                    <!-- Aquí es donde el JS inyectará el email y el país -->
+                    <div class="dato-linea">
+                        <strong>Correo electrónico:</strong> 
+                        <span id="res-email" class="dato-valor"></span>
+                    </div>
+                    <div class="dato-linea final">
+                        <strong>País de residencia:</strong> 
+                        <span id="res-pais" class="dato-valor"></span>
+                    </div>
+                </div>
+
+                <a href="index.html" class="btn-enviar btn-volver">Volver al inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>© 2026 FC Barcelona Landing Page de Iago López.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

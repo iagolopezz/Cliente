@@ -10,35 +10,47 @@
 
     <!-- Encabezado -->
     <header class="encabezado">
-        <div class="contenedor">
-            <a href="#" class="logotipo">FC BARCELONA</a>
+        <div class="contenedor barra-navegacion">
+            <a href="index.html" class="logotipo">
+                <img src="Imagenes/escudo.png" alt="Escudo FC Barcelona" class="escudo-barca">
+                FC BARCELONA
+            </a>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="#">Beneficios</a></li>
+                    <li><a href="#">Entradas</a></li>
+                    <li><a href="#">Barça Store</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-
-    <main class="contenedor">
-        <div class="cuadrcula-principal">
+    <!-- Contenido Principal -->
+    <main>
+        <div class="contenedor cuadrcula-principal">
             
-            <!-- Columna Izquierda -->
+            <!-- Columna Izquierda (Textos y Beneficios) -->
             <section class="columna-izquierda">
                 <span class="insignia">Més que un club</span>
-                <h1>Únete a la mayor comunidad de aficionados culés</h1>
-                <p class="texto-introductorio">
-                    Regístrate hoy mismo para tener acceso prioritario a la preventa de entradas, sorteos de camisetas oficiales firmadas, contenido exclusivo detrás de las cámaras y un 10% de descuento en la Barça Store.
-                </p>
-
-                <!-- Bloques de Beneficios -->
+                <h1>Únete a la mayor comunidad de <span>aficionados culés</span></h1>
+                <p class="texto-introductorio">Regístrate hoy mismo para tener acceso prioritario a la preventa de entradas, sorteos de camisetas oficiales firmadas, contenido exclusivo detrás de las cámaras y un 10% de descuento en la Barça Store.</p>
+                
                 <div class="beneficios">
                     <div class="beneficio-tarjeta">
-                        <span class="icono">🎟</span>
+                        <span class="icono">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="currentColor"><path d="M4 18v-2.268a2.5 2.5 0 0 0 0-4.564V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2.168a2.5 2.5 0 0 0 0 4.564V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Zm9-9v2h2V9h-2Zm0 4v2h2v-2h-2Zm-4-4v2h2V9H9Zm0 4v2h2v-2H9Z"/></svg>
+                        </span>
                         <div>
                             <h3>Entradas garantizadas</h3>
                             <p>Preventa exclusiva para grandes partidos de Liga y Champions.</p>
                         </div>
                     </div>
-
+                    
                     <div class="beneficio-tarjeta">
-                        <span class="icono">👕</span>
+                        <span class="icono">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="currentColor"><path d="M14.828 2.172a2 2 0 0 1 2.828 0l3.111 3.111a1 1 0 0 1-.133 1.517l-3.321 2.214A2 2 0 0 0 16.5 10.68V21a1 1 0 0 1-1 1H8.5a1 1 0 0 1-1-1V10.68a2 2 0 0 0-.813-1.666L4.366 6.8a1 1 0 0 1-.133-1.517l3.111-3.111a2 2 0 0 1 2.828 0L12 4.343l2.828-2.171Z"/></svg>
+                        </span>
                         <div>
                             <h3>Sorteos mensuales</h3>
                             <p>Equipaciones oficiales firmadas por los jugadores del primer equipo.</p>
@@ -47,44 +59,46 @@
                 </div>
             </section>
 
-            <!-- Columna Derecha (Formulario) -->
+            <!-- Columna Derecha (Formulario arreglado sin duplicar) -->
             <aside class="columna-derecha">
-                <div class="caja-formulario">
-                    <h2>Crea tu cuenta Culé</h2>
-                    <p>Forma parte de nuestra historia</p>
+                <form id="form-registro" class="caja-formulario" action="resultado.html">
+    <h2>Crea tu cuenta Culé</h2>
+    <p>Forma parte de nuestra historia</p>
 
-                    <form action="#" method="POST">
-                        <div class="grupo-formulario">
-                            <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
+    <div class="grupo-formulario">
+        <label for="nombre">Nombre completo</label>
+        <!-- ¡IMPORTANTE! Debe tener id="nombre" -->
+        <input type="text" id="nombre" required placeholder="Tu nombre"> 
+    </div>
 
-                        <div class="grupo-formulario">
-                            <label for="correo">Correo electrónico</label>
-                            <input type="email" id="correo" name="correo" required>
-                        </div>
+    <div class="grupo-formulario">
+        <label for="email">Correo electrónico</label>
+        <!-- ¡IMPORTANTE! Debe tener id="email" -->
+        <input type="email" id="email" required placeholder="tu@email.com"> 
+    </div>
 
-                        <div class="grupo-formulario">
-                            <label for="pais">País de residencia</label>
-                            <select id="pais" name="pais" required>
-                                <option value="" disabled selected>Selecciona tu país</option>
-                                <option value="ES">España</option>
-                                <option value="MX">México</option>
-                                <option value="AR">Argentina</option>
-                                <option value="CO">Colombia</option>
-                                <option value="US">Estados Unidos</option>
-                                <option value="OTRO">Otro país</option>
-                            </select>
-                        </div>
+    <div class="grupo-formulario">
+        <label for="pais">País de residencia</label>
+        <!-- ¡IMPORTANTE! Debe tener id="pais" -->
+        <select id="pais" required>
+            <option value="">Selecciona tu país</option>
+            <option value="España">España</option>
+            <option value="México">México</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Otro país">Otro país</option>
+        </select>
+    </div>
 
-                        <div class="grupo-casilla">
-                            <input type="checkbox" id="privacidad" name="privacidad" required>
-                            <label for="privacidad">Acepto la política de privacidad y los términos.</label>
-                        </div>
+    <div class="grupo-casilla">
+        <input type="checkbox" id="terminos" required>
+        <label for="terminos">Acepto la política de privacidad y los términos.</label>
+    </div>
 
-                        <button type="submit" class="btn-enviar">Registrarme gratis</button>
-                    </form>
-                </div>
+    <!-- ¡IMPORTANTE! Debe ser un botón de tipo submit o un input type="submit" -->
+    <button type="submit" class="btn-enviar">Registrarme gratis</button>
+</form>
             </aside>
 
         </div>
@@ -93,9 +107,12 @@
     <!-- Pie de página -->
     <footer class="pie-pagina">
         <div class="contenedor">
-            <p>&copy; 2026 FC Barcelona Landing Page de Iago López.</p>
+            <p>© 2026 FC Barcelona Landing Page de Iago López.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://jquery.com"></script>
+    <script src="script.js"></script>
 </body>
 </html>
