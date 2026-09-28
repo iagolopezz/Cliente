@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Encabezado -->
     <header class="encabezado">
         <div class="contenedor barra-navegacion">
             <a href="index.html" class="logotipo">
@@ -30,7 +29,7 @@
     <main>
         <div class="contenedor cuadrcula-principal">
             
-            <!-- Columna Izquierda (Textos y Beneficios) -->
+            <!-- Columna Izquierda -->
             <section class="columna-izquierda">
                 <span class="insignia">Més que un club</span>
                 <h1>Únete a la mayor comunidad de <span>aficionados culés</span></h1>
@@ -59,7 +58,7 @@
                 </div>
             </section>
 
-            <!-- Columna Derecha (Formulario arreglado sin duplicar) -->
+            <!-- Columna Derecha -->
             <aside class="columna-derecha">
                 <form id="form-registro" class="caja-formulario" action="resultado.html">
     <h2>Crea tu cuenta Culé</h2>
@@ -67,19 +66,16 @@
 
     <div class="grupo-formulario">
         <label for="nombre">Nombre completo</label>
-        <!-- ¡IMPORTANTE! Debe tener id="nombre" -->
         <input type="text" id="nombre" required placeholder="Tu nombre"> 
     </div>
 
     <div class="grupo-formulario">
         <label for="email">Correo electrónico</label>
-        <!-- ¡IMPORTANTE! Debe tener id="email" -->
         <input type="email" id="email" required placeholder="tu@email.com"> 
     </div>
 
     <div class="grupo-formulario">
         <label for="pais">País de residencia</label>
-        <!-- ¡IMPORTANTE! Debe tener id="pais" -->
         <select id="pais" required>
             <option value="">Selecciona tu país</option>
             <option value="España">España</option>
@@ -96,7 +92,6 @@
         <label for="terminos">Acepto la política de privacidad y los términos.</label>
     </div>
 
-    <!-- ¡IMPORTANTE! Debe ser un botón de tipo submit o un input type="submit" -->
     <button type="submit" class="btn-enviar">Registrarme gratis</button>
 </form>
             </aside>
