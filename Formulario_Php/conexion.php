@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 
 
-$uri = "mongodb+srv://iagolopezro_db_user:HBZV6aqMIhItZo7U@cluster0.dvctmw3.mongodb.net/?appName=Cluster0";
+$uri = getenv("MONGODB_URI");
 $db = getenv("MONGODB_DB");
 
 try {
