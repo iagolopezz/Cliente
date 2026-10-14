@@ -1,0 +1,13 @@
+
+services:
+  web:
+    build: .
+    container_name: mi_landing
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - vendor:/var/www/html/vendor
+    environment:
+      MONGODB_URI: "mongodb+srv://iagolopezro_db_user:HBZV6aqMIhItZo7U@cluster0.dvctmw3.mongodb.net/?appName=Cluster0"
+
