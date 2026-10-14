@@ -13,7 +13,7 @@ $edad = $_POST["edad"] ?? "";
 
 $errores = [];
 
-// 2. Procesar validaciones
+// 2. Procesar validaciones básicas
 if (empty($nombre)) {
     $errores[] = "El nombre es obligatorio.";
 }
@@ -26,7 +26,6 @@ if (filter_var($edad, FILTER_VALIDATE_INT) === false || (int)$edad < 1) {
     $errores[] = "La edad debe ser un número entero mayor que cero.";
 }
 
-// Si hay errores de validación, se muestran y se detiene la ejecución
 if (!empty($errores)) {
     echo "<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><title>Errores</title></head><body>";
     echo "<h2>Se han encontrado errores:</h2><ul>";
@@ -37,19 +36,15 @@ if (!empty($errores)) {
     exit;
 }
 
-// 3. Conexión y operaciones con MongoDB Atlas
-$uri = getenv("MONGODB_URI");
-$db = getenv("MONGODB_DB");
+// 3. Credenciales fijas para asegurar la conexión
+$uri = "mongodb+srv://iagolopezro_db_user:HBZV6aqMIhItZo7U@cluster0.dvctmw3.mongodb.net/?appName=Cluster0";
+$db = "bbdd";
 
 try {
-    if (!$uri || !$db) {
-        throw new Exception("Las variables de entorno MONGODB_URI o MONGODB_DB no están configuradas.");
-    }
-
     $cliente = new MongoDB\Client($uri);
     $coleccion = $cliente->selectCollection($db, "inscripciones");
 
-    // Insertar el nuevo registro enviado por el usuario
+    // INSERTAR DATOS EN ATLAS
     $coleccion->insertOne([
         'nombre' => $nombre,
         'correo' => $correo,
@@ -57,7 +52,7 @@ try {
         'fecha'  => new MongoDB\BSON\UTCDateTime()
     ]);
 
-    // Consultar todos los registros de la base de datos para listarlos abajo
+    // CONSULTAR TODOS LOS REGISTROS
     $cursor = $coleccion->find([], ['sort' => ['fecha' => -1]]);
     $documentos = iterator_to_array($cursor);
 
@@ -86,17 +81,15 @@ try {
     <h1>Procesamiento de Inscripción</h1>
 
     <?php if (isset($error_bd)): ?>
-        <!-- Si falló la base de datos, mostramos el error técnico -->
         <div class="error-box">
             <strong>Error de Base de Datos:</strong> <?php echo htmlspecialchars($error_bd); ?>
         </div>
     <?php else: ?>
-        <!-- Si todo fue bien, confirmamos el éxito del envío actual -->
         <div class="success-box">
             <strong>¡Éxito!</strong> Tus datos se han guardado correctamente en MongoDB Atlas.
         </div>
 
-        <h2>Listado completo de inscritos</h2>
+        <h2>Listado completo de inscritos en Atlas</h2>
         <table>
             <thead>
                 <tr>

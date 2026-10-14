@@ -5,7 +5,7 @@ services:
       MONGODB_DB: ${MONGODB_DB}
       MONGODB_URI: ${MONGODB_URI}
     ports:
-      - "8080:80"
+      - "8085:80"
     volumes:
       - "./:/var/www/html"
     
